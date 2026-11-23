@@ -1,0 +1,157 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+  color: var(--text);
+}
+
+/* NAV */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 1rem 0;
+  background: linear-gradient(to bottom, rgba(6, 0, 16, 0.92), rgba(6, 0, 16, 0.6), transparent);
+  backdrop-filter: blur(12px);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.nav-links {
+  display: flex;
+  gap: 1.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+.nav-links a:hover {
+  color: var(--text);
+}
+
+/* HERO */
+.hero {
+  padding: 4.5rem 1.5rem 3.5rem;
+  text-align: center;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(167, 139, 250, 0.12);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  color: var(--accent-2);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.gradient-text {
+  background: linear-gradient(135deg, #c4b5fd 0%, #a78bfa 40%, #f0abfc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-sub {
+  max-width: 540px;
+  margin: 0 auto 2rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: left;
+}
+.stat svg {
+  color: var(--accent);
+}
+.stat strong {
+  display: block;
+  font-size: 1.35rem;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.stat span {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* SECTIONS */
+.habits-section,
+.progress-section,
+.ai-section {
+  padding: 3rem 1.5rem 4rem;
+}
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+.section-header h2,
+.progress-section h2,
+.ai-section h2 {
+  font-size: 1.65rem;
+}
+.section-desc {
+  color: var(--muted);
+  margin-bottom: 1.75rem;
+  max-width: 480px;
+}
+.add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1rem;
+  border-radius: 12px;
+  background: rgba(167, 139, 250, 0.15);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  color: var(--accent-2);
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.2s, transform 0.15s;
+}
+.add-btn:hover {
+  background: rgba(167, 139, 250, 0.25);
+  transform: translateY(-1px);
+}
+
+/* FOOTER */
+.footer {
+  padding: 3rem 1.5rem 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    display: none;
+  }
+  .hero {
+    padding-top: 3rem;
+  }
+}
